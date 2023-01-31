@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <!-- html by sungbly_tsstt 1/31/2023 -->
+    <script src="go_file/base64.min.js"type="text/javascript"></script>
+    <script>
+        //js by sungbly_tsstt 1/31/2023
+        function BackBase64(str){
+            return atob(str);
+        }
+
+        function GetRequest() {
+                var url = location.search;
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for ( var i = 0; i < strs.length; i++) {
+                        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+        }
+        var linkgo;
+        linkgo = base64.decode(GetRequest())
+        document.getElementById("Text-zh").innerHTML = "你正在离开sungbly-team-studio去往"+linkgo;
+        document.getElementById("Text-en").innerHTML = "your exiting sungbly-team-studio go to"+linkgo;
+        function go(){
+            location.href="go.html/u="+GetRequest()
+        }
+    </script>
+    <style>
+        /* css by sungbly_tsstt */
+        body{
+            background-color: FFFFFF;
+        }
+        .linkwindow{
+            border: 1px;
+            background-color: azure;
+
+        }
+    </style>
+    <title>href messge</title>
+</head>
+<body>
+    <p style="text-align: center;"><div class="linkwindow">
+        <p id="Text-zh">你正在离开sungbly-team-studio去往null</p>
+        <p id="Text-en">your exiting sungbly-team-studio go to null</p>
+        <button onclick="go">go</button>
+    </div></p>
+</body>

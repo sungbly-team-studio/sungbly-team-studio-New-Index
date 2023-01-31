@@ -1,0 +1,43 @@
+body{
+    background-color: #00ffae;
+}
+.HeadDiv{
+    background-color: rgb(49, 255, 49);
+    height:100%;
+    width:100%;
+}
+.HeadDivText{
+    z-index: 50%;
+}
+@font-face {
+    font-family: "emojigui";
+    src: url("../web/Fonts/seguiemj.ttf") format("truetype");
+}
+@font-face {
+    font-family: "consola DF";   
+    src: url("../web/Fonts/consola.ttf") format("truetype");
+}
+.MainDiv{
+    /* border: 10px; */
+    border-radius: 10px;
+    box-shadow: 1px ;
+    box-shadow: 1px 1px 3px 3px #00ffae;
+    height: auto;
+    width:100%;
+    background-color:#e4e4e4 ;
+}
+.People{
+    /* border: 10px; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 3px #2d2d2d;
+    height: auto;
+    width:90%;
+    background-color:#e4e4e4 ;
+}
+.topbar{
+    position: fixed;
+    top:0;
+    background-color:#ffffff;
+    box-shadow: #2d2d2d;
+    width:100%;
+}
